@@ -1,0 +1,13 @@
+{% extends 'appPages/base.html' %}
+
+{% block title %}Create an Account{% endblock %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <form  method="POST" autocomplete="off" class="form-group">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class='btn btn-success'><i class="fas fa-user-plus"></i> SignUp</button>
+    </form>
+{% endblock %}
